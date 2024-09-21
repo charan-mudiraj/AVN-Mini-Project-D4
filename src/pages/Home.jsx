@@ -1,6 +1,13 @@
 import React from "react";
 import NavBar from "../components/NavBar";
 import Footer from "../components/Footer";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {
+  faChartPie,
+  faChartSimple,
+  faWandMagic,
+  faWandMagicSparkles,
+} from "@fortawesome/free-solid-svg-icons";
 
 export default function Home() {
   return (
@@ -10,11 +17,16 @@ export default function Home() {
         <div className=" text-center bg-body-secondary">
           <div className="container py-5">
             <h1 className="text-body-emphasis">
-              A Fully Functioning Attendance Portal
+              {" "}
+              A Fully Functioning Students Portal
             </h1>
-            <h5>***For CSE(Data Science) 2-2 Students Only***</h5>
+            <h4>
+              An Interface for Management and Staff to Get & Manage Student
+              Data.
+            </h4>
+            <h5>***For CSE(Data Science) 2021-25 Batch Only***</h5>
             <p className="col-lg-8 mx-auto fs-5 text-muted">
-              Get your Attendance Performance on Daily Basis with our
+              Get the Students Data and their Academic Performance with our
               Interactive and User-Friendly Web-Site.
             </p>
             <div className="mt-3 d-inline-flex gap-2 ">
@@ -22,7 +34,7 @@ export default function Home() {
                 href="./upload"
                 className="d-inline-flex align-items-center btn btn-primary btn-lg px-4 rounded-pill"
               >
-                Upload
+                Get All Students Data
               </a>
             </div>
           </div>
@@ -36,55 +48,53 @@ export default function Home() {
         <div className="row g-4 py-5 row-cols-1 row-cols-lg-3">
           <div className="col d-flex align-items-start">
             <div className="icon-square text-body-emphasis bg-body-secondary d-inline-flex align-items-center justify-content-center fs-4 flex-shrink-0 me-3">
-              <img src="../images/percent.svg" className="bi" height={35} />
+              <FontAwesomeIcon icon={faChartPie} />
             </div>
             <div>
-              <h3 className="fs-2 text-body-emphasis">
-                Personalized Percentage
-              </h3>
+              <h3 className="fs-2 text-body-emphasis">Visualized Data</h3>
               <p>
-                Get your Attendance Percentace as over-all(till-today) or till
-                the prefered date.
+                Get Students Academic Performace in Visual Form (Charts and
+                Graphs) for Comparative Data Analytics.
               </p>
               <a href="/status" className="btn btn-primary">
-                Get Percentage
+                Analyze Data
               </a>
             </div>
           </div>
           <div className="col d-flex align-items-start">
             <div className="icon-square text-body-emphasis bg-body-secondary d-inline-flex align-items-center justify-content-center fs-4 flex-shrink-0 me-3">
-              <img
-                src="../images/person-heart.svg"
-                className="bi"
-                height={35}
+              <FontAwesomeIcon
+                icon={faWandMagicSparkles}
+                style={{
+                  color: "black",
+                  height: "30px",
+                  width: "30px",
+                }}
               />
             </div>
             <div>
               <h3 className="fs-2 text-body-emphasis">
-                Responsive &amp; User-Friendly
+                Responsive & User-Friendly
               </h3>
               <p>
-                Users can easily understand and navigate through the Application
-                in an Efficient way through Multiple Types of Devices.
+                Admins(Management & Staff) can easily navigate through the
+                Application in an Efficient way through all Devices and Mangage
+                Student Data.
               </p>
               {/* <a href="#" class="btn btn-primary">
-          Primary button
-        </a> */}
+                Primary button
+              </a> */}
             </div>
           </div>
           <div className="col d-flex align-items-start">
             <div className="icon-square text-body-emphasis bg-body-secondary d-inline-flex align-items-center justify-content-center fs-4 flex-shrink-0 me-3">
-              <img
-                src="../images/bar-chart-line.svg"
-                className="bi"
-                height={35}
-              />
+              <FontAwesomeIcon icon={faChartSimple} />
             </div>
             <div>
               <h3 className="fs-2 text-body-emphasis">Statistics</h3>
               <p>
-                Get your over-all Statistics on your Attendance which includes
-                your present &amp; absent stats till the date.
+                Get over-all Statistics on the Attendace of Students which
+                includes present & absent stats till the date.
               </p>
               <a href="./status" className="btn btn-primary">
                 Get Statistics

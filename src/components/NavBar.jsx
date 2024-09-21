@@ -5,7 +5,7 @@ export default function NavBar() {
   return (
     <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
       <a className="navbar-brand ms-2" href="./">
-        Attendance Portal
+        Students Portal
       </a>
       <button
         className="navbar-toggler"
